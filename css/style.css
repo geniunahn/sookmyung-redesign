@@ -2,10 +2,161 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
+:root {
+  --main-color: #0c2d83;
+  --bg-color-light: #f5f5f5;
+  --text-light: #666;
+  --white: #fff;
+}
+
 body {
   font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  background-color: var(--white);
 }
 
 h1 {
   font-family: "Crimson Text", serif;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+a {
+  color: #000;
+}
+
+.container {
+  width: 1440px;
+  /* outline: 1px solid #000; */
+  margin: 0 auto;
+  position: relative;
+}
+
+#main-header {
+  height: 80px;
+}
+
+#main-header h1 {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+#gnb {
+  position: absolute;
+  right: 97px;
+  top: 28px;
+  /* 2단 메뉴를 보이게 하기 위해 z-index를 지정한다 */
+  z-index: 99;
+}
+
+/* 1단계 메뉴 */
+
+#gnb .depth1 {
+  display: flex;
+  text-align: center;
+}
+
+#gnb .depth1 > li {
+  margin-left: 30px;
+  /* outline: 1px solid red; */
+  width: 7em;
+}
+
+#gnb .depth1 > li > a {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* 2단계 메뉴 */
+
+#gnb .depth2 {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 26px;
+  text-align: left;
+  display: none;
+  /* 만약 2단 메뉴가 슬라이딩 방식으로 나타나길 바란다면 여기에다가 height 값을 0으로 지정하고 아래에다가 hover가 될 때 height 값을 다르게 지정하면 된다.*/
+}
+
+#gnb .depth2 > li {
+  margin-bottom: 10px;
+}
+
+#gnb .depth2 > li:last-child {
+  margin-bottom: 0px;
+}
+
+/* hover 액션 */
+/* depth1 li에 마우스가 올라가면 depth2 표시 */
+#gnb .depth1 > li:hover .depth2 {
+  display: block;
+}
+
+#gnb .depth1 > li > a:hover {
+  color: var(--main-color);
+}
+
+#gnb .depth2 > li > a:hover {
+  text-decoration: underline;
+}
+
+#btn-toggle {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+
+/* 메인배너 */
+#main-banner {
+  height: 480px;
+  background: #000;
+}
+
+#main-banner .container {
+  height: 100%;
+  background-image: url(../image/main-banner1.jpg);
+  display: flex;
+  align-items: center;
+}
+
+#main-banner h1 {
+  color: #fff;
+  padding-left: 56px;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+/* introduction */
+
+#intro .container {
+  padding: 50px 20px;
+  /* outline: 1px solid #000; */
+}
+
+#intro .intro-list {
+  display: flex;
+  gap: 20px;
+}
+
+#intro .intro-list > li {
+  /* outline: 1px solid red; */
+  width: calc((100% - 60px) / 4);
+}
+
+#intro .intro-list > li img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* 여백, 정렬 */
+#intro .intro-list h2 {
+  margin-bottom: 10px;
 }
