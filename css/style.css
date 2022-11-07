@@ -1,6 +1,14 @@
+/* style.css */
+
+/* 웹 폰트: Crimson, noto sans KR */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+/* css에서 style 문서 불러오기 */
 @import "./reset.css";
 
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+/*  
+font-family: 'Crimson Text', serif;
+font-family: 'Noto Sans KR', sans-serif;
+*/
 
 :root {
   --main-color: #0c2d83;
@@ -17,6 +25,8 @@ body {
 
 h1 {
   font-family: "Crimson Text", serif;
+  font-size: 26px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -32,14 +42,15 @@ a {
 }
 
 .container {
-  width: 1440px;
-  /* outline: 1px solid #000; */
+  max-width: 1440px;
+  /* outline: 2px solid #333; */
   margin: 0 auto;
   position: relative;
 }
 
 #main-header {
   height: 80px;
+  /* background: #ccc; */
 }
 
 #main-header h1 {
@@ -52,20 +63,18 @@ a {
   position: absolute;
   right: 97px;
   top: 28px;
-  /* 2단 메뉴를 보이게 하기 위해 z-index를 지정한다 */
-  z-index: 99;
+  z-index: 999;
 }
 
 /* 1단계 메뉴 */
-
 #gnb .depth1 {
   display: flex;
-  text-align: center;
 }
 
 #gnb .depth1 > li {
-  margin-left: 30px;
+  margin-left: 20px;
   /* outline: 1px solid red; */
+  text-align: center;
   width: 7em;
 }
 
@@ -75,15 +84,13 @@ a {
 }
 
 /* 2단계 메뉴 */
-
 #gnb .depth2 {
-  background: #fff;
-  border: 1px solid #ccc;
+  background: #ffffff;
+  border: 1px solid #cccccc;
   padding: 10px;
   margin-top: 26px;
-  text-align: left;
   display: none;
-  /* 만약 2단 메뉴가 슬라이딩 방식으로 나타나길 바란다면 여기에다가 height 값을 0으로 지정하고 아래에다가 hover가 될 때 height 값을 다르게 지정하면 된다.*/
+  text-align: left;
 }
 
 #gnb .depth2 > li {
@@ -91,7 +98,7 @@ a {
 }
 
 #gnb .depth2 > li:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 /* hover 액션 */
@@ -122,7 +129,7 @@ a {
 
 #main-banner .container {
   height: 100%;
-  background-image: url(../image/main-banner1.jpg);
+  background-image: url("../images/main-banner-e1.jpg");
   display: flex;
   align-items: center;
 }
@@ -134,8 +141,7 @@ a {
   font-weight: 400;
 }
 
-/* introduction */
-
+/* Introduction */
 #intro .container {
   padding: 50px 20px;
   /* outline: 1px solid #000; */
@@ -143,11 +149,13 @@ a {
 
 #intro .intro-list {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  text-align: center;
 }
 
 #intro .intro-list > li {
-  /* outline: 1px solid red; */
+  /* outline: 2px solid red; */
+  /* (너비 - 칼럼여백(칼럼수 - 1)) / 칼럼수 */
   width: calc((100% - 60px) / 4);
 }
 
@@ -156,7 +164,90 @@ a {
   margin-bottom: 15px;
 }
 
-/* 여백, 정렬 */
+/* 여백, 정렬  */
 #intro .intro-list h2 {
   margin-bottom: 10px;
+}
+
+/* Notice */
+#notice {
+  background-color: var(--bg-color-light);
+}
+
+#notice .container {
+  padding: 50px 20px;
+  /* outline: 1px solid #000; */
+}
+
+#notice .icons-list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#notice .icons-list > li {
+  /* outline: 2px solid red; */
+  width: calc((100% - 40px) / 3);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.btn-more {
+  font-size: 14px;
+  color: #666;
+}
+
+#notice .icons-list > li .icon-group h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* sns banner */
+
+#sns-banner .container {
+  background-image: url(../image/bottom-banner.jpg);
+  color: #fff;
+  padding-left: 70px;
+  padding-right: 70px;
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#sns-banner h1 {
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+#sns-banner .sns-icon-group a {
+  margin-left: 28px;
+}
+
+/* footer */
+
+#main-footer {
+  margin-top: 90px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#main-footer .container {
+  padding: 50px 20px;
+}
+
+#main-footer .footer-menu {
+  margin-bottom: 15px;
+}
+
+#main-footer .footer-menu a {
+  font-size: 14px;
+  color: #444;
+}
+
+#main-footer address,
+.copy {
+  font-size: 12px;
+  font-style: normal;
+  color: #666;
+  margin-bottom: 5px;
 }
