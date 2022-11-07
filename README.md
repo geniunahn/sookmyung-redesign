@@ -1,5 +1,8 @@
 # sookmyung-redesign
 
+url :
+https://geniunahn.github.io/sookmyung-redesign/
+
 Add files via upload
 
 주요내용
