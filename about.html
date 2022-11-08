@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>숙명여자대학교 무용과</title>
+    <title>학과소개 | 숙명여자대학교 무용과</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/sub.css" />
     <!-- 제이쿼리 라이브러리 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- 내 자바스크립트 -->
     <script src="./js/main.js"></script>
   </head>
-  <body>
+  <body id="about">
     <header id="main-header">
       <div class="container">
         <h1>
@@ -75,6 +76,8 @@
         </a>
       </div>
       <!-- container -->
+
+      <!-- 헤더 -->
     </header>
 
     <div id="site-map-menu">
@@ -150,102 +153,92 @@
       </div>
     </div>
 
-    <!-- 메인배너 -->
-    <section id="main-banner">
+    <!-- 서브페이지 타이틀 -->
+
+    <section id="sub-title">
       <div class="container">
-        <h1>
-          SOOKMYUNG<br />
-          WOMEN’S UNIVERSITY<br />
-          DEPARTMENT OF DANCE
-        </h1>
+        <h1>학과소개</h1>
       </div>
     </section>
 
-    <!-- Introduction -->
-    <section id="intro">
+    <!-- 서브 메뉴(Local Navigation bar) -->
+    <nav id="lnb">
       <div class="container">
-        <h1>Introduction</h1>
-        <ul class="intro-list">
-          <li>
-            <a href="#">
-              <img src="./image/교육목표.jpg" alt="교육목표" />
-              <h2>교육목표</h2>
-            </a>
-            <p>미래 문화예술을 이끌어갈 인재 양성</p>
-          </li>
-          <li>
-            <a href="#">
-              <img src="./image/교육과정.jpg" alt="교육과정" />
-              <h2>교육과정</h2>
-            </a>
-            <p>다양한 장르의 실기 및 이론교육</p>
-          </li>
-          <li>
-            <a href="#">
-              <img src="./image/교수진.jpg" alt="교수진" />
-              <h2>교수진</h2>
-            </a>
-            <p>숙명여자대학교 무용과 교수진</p>
-          </li>
-          <li>
-            <a href="#">
-              <img src="./image/학과활동.jpg" alt="학과활동" />
-              <h2>학과활동</h2>
-            </a>
-            <p>창작 발표회 & 졸업 발표회</p>
-          </li>
+        <ul>
+          <li class="active"><a href="#">학과소개</a></li>
+          <li><a href="#">교육목표</a></li>
+          <li><a href="#">교육과정</a></li>
+          <li><a href="#">시설 및 환경</a></li>
+          <li><a href="#">오시는 길</a></li>
         </ul>
       </div>
-      <!-- container -->
-    </section>
+    </nav>
 
-    <!-- Notice -->
-    <section id="notice">
+    <!-- 메인콘텐츠 -->
+
+    <section id="section1">
       <div class="container">
-        <h1>Notice</h1>
-        <ul class="icons-list">
-          <li>
-            <div class="icon-group">
-              <img src="./image/notice-icon1.svg" alt="공지사항" />
-              <h3>공지사항</h3>
-              <a href="#" class="btn-more">View more</a>
-            </div>
-          </li>
-          <li>
-            <div class="icon-group">
-              <img src="./image/notice-icon2.svg" alt="열림마당" />
-              <h3>열림마당</h3>
-              <a href="#" class="btn-more">View more</a>
-            </div>
-          </li>
-          <li>
-            <div class="icon-group">
-              <img src="./image/notice-icon3.svg" alt="1:1 문의" />
-              <h3>1:1 문의</h3>
-              <a href="#" class="btn-more">View more</a>
-            </div>
-          </li>
-        </ul>
+        <h1>SOOKMYUNG WOMEN’S <br />UNIVERSITY DEPARTMENT OF DANCE</h1>
+        <p>
+          21세기를 내다보는 이 시점에서 무용예술은 선진예술의 한 영역으로
+          강조되고 있습니다. 무용과는 이러한 시대적 흐름을 자각하고 전문무용인
+          양성을 비전으로 무용의 이론과 실기를 교육하고 있습니다. <br />
+          한국무요, 발레, 현대무용의 전공 실기와 미적, 사적, 비평적, 예술적
+          이론교육을 바탕으로 다각도의 교육을 병행하고, 축적된 무용 이론과
+          특화된 실기의 학습을 통해 전인적인 무용인 양성에 주력하고 있습니다.
+          <br />
+          무용과에서는 다양한 장르의 실기 및 이론교육 그리고 감상, 공용, 실습
+          등을 통해 사회에 다양한 영향력을 발휘할 수 있고, 생명력 있는 안목을
+          가진 무용인을 육성하는데 목적이 있으며, 무용실기에 따른 기본종작과
+          정확한 모습을 통한 신체를 육성하여 그 표현법을 연구하고 무용예술
+          전반에 있어서 이론 정립과 철학적 근거를 해명하는 데 기초를 두어 실기에
+          응용하도록 합니다. <br />
+        </p>
       </div>
     </section>
 
-    <!-- SNS 배너 -->
-    <section id="sns-banner">
+    <section id="section2">
       <div class="container">
-        <div class="banner-title">
-          <h1>Social Networking Service of SMD</h1>
-          <p>숙명여자대학교 무용과 SNS 바로가기</p>
+        <div class="item">
+          <img src="./image/about-img1.jpg" alt="교육목적" />
+          <h2>교육목적</h2>
+          <p>
+            무용과는 무용 실기 및 이론을 토대로 창의력 넘치는 전문 예술가와
+            무용학자로서 무용계를 주도해 갈 인재 양성을 목적으로 무용 실기와
+            이론의 유기적 수업방식을 통해 전공에 따른 학생 개개인의 소양에
+            맞도록 지도합니다.
+          </p>
         </div>
-        <div class="sns-icon-group">
-          <a href="#">
-            <img src="./image/instar-icon-white.svg" alt="instagram" />
-          </a>
-          <a href="#">
-            <img src="./image/face-icon-white.svg" alt="facebook" />
-          </a>
+        <div class="item">
+          <img src="./image/about-img2.jpg" alt="교육내용" />
+          <h2>교육내용</h2>
+          <p>
+            전공필수과목 <br />
+            한국무용, 발레, 현대무욕, 무용미학, 예술론, 무용사, 무용작품분석,
+            인체기능학, 레파토리, 바디컨디셔닝
+            <br />
+            <br />
+            전공선택과목<br />
+            한국무용, 발레, 현대무용, 교육무용론, 무용개론, 무대효과론,
+            타악실기, 창작실습, 크리에이션 코칭, 한국무용실기워크숍,
+            오디션컨설팅
+          </p>
+        </div>
+        <div class="item">
+          <img src="./image/about-img3.jpg" alt="졸업요건" />
+          <h2>졸업요건</h2>
+          <p>
+            1학년 창작발표회 / 2학년 창작발표회 / 3학년 창작발표회에 모두
+            창작하는 과정을 거쳐, 무용 전공 실기 향상 후 4학년 개인 졸업 작품
+            발표회를 할 수 있는 자격이 주어집니다. <br />
+            총3번의 학과 창작발표회와 졸업작품 발표회를 거쳐야만, 졸업을 할 수
+            있으며 위 사항은 무용과 학과 내 규정입니다.
+          </p>
         </div>
       </div>
     </section>
+
+    <!-- 푸터 -->
 
     <footer id="main-footer">
       <div class="container">

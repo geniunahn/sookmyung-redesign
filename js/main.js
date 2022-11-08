@@ -22,3 +22,15 @@ $(function () {
     });
   }, 5000);
 });
+
+// 사이트맵 버튼
+
+$(function () {
+  $("#btn-toggle").on("click", function () {
+    $("#site-map-menu").addClass("show");
+  });
+
+  $("#site-menu-close").on("click", function () {
+    $("#site-map-menu").removeClass("show");
+  });
+});

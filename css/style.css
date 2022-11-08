@@ -41,6 +41,10 @@ a {
   color: #000;
 }
 
+p {
+  line-height: 26px;
+}
+
 .container {
   max-width: 1440px;
   /* outline: 2px solid #333; */
@@ -90,7 +94,6 @@ a {
   padding: 10px;
   margin-top: 26px;
   display: none;
-  text-align: left;
 }
 
 #gnb .depth2 > li {
@@ -250,4 +253,109 @@ a {
   font-style: normal;
   color: #666;
   margin-bottom: 5px;
+}
+
+/* 사이트맵 팝업 */
+#site-map-menu {
+  position: fixed;
+  width: 80%;
+  height: 80vh;
+  background: #fff;
+  /* 여기서부터 사이트맵 중앙 정렬 소스입니다. */
+  left: calc(50%);
+  top: calc(50%);
+  /* 가변형인 요소이기 때문에 고정 px로 중앙 정렬 맞춰줄 수 없다. 그러므로 translateX 를 대상 요소의 전체 크기의 %만큼 움직이도록 해서 중앙 정렬을 맞추는 것이다. */
+  transform: translateX(-50%) translateY(-50%);
+  /* 참고로 transform 은 따로 쓰면 나머지 하나가 실행되지 않기 때문에 반드시 위와같이 함께 사용해야 한다.  */
+  z-index: 1000;
+}
+
+#site-map-menu .container {
+  /* outline: 1px solid #333; */
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* box-shadow: 5px 5px 5px #000; */
+}
+
+#site-map-menu .site-menu {
+  /* outline: 1px solid #333; */
+  width: 100%;
+  height: 85%;
+  display: flex;
+}
+
+#site-map-menu .site-menu > ul.depth1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  margin-top: 70px;
+}
+
+#site-map-menu .site-menu > ul.depth1 > li {
+  /* width: 33.33%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  /* outline: 1px solid blue; */
+  text-align: center;
+}
+
+#site-map-menu .site-menu > ul.depth1 > li:nth-child(2),
+#site-map-menu .site-menu > ul.depth1 > li:nth-child(5) {
+  width: 50%;
+}
+
+#site-map-menu .site-menu > ul.depth1 > li:nth-child(1),
+#site-map-menu .site-menu > ul.depth1 > li:nth-child(3),
+#site-map-menu .site-menu > ul.depth1 > li:nth-child(4),
+#site-map-menu .site-menu > ul.depth1 > li:nth-child(6) {
+  width: 25%;
+}
+
+/* depth2 와 depth1 의 부모 박스를 만들면 된다. */
+
+.depth2-box {
+  /* outline: 1px solid red; */
+  text-align: left;
+}
+
+.depth2-box > a {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.depth2 {
+  margin-top: 20px;
+}
+
+/* 1단계 메뉴 텍스트(제목) */
+#site-map-menu .site-menu > ul.depth1 > li > a {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* 사이트맵 close 버튼 */
+
+#site-menu-close {
+  position: absolute;
+  right: calc(2%);
+  top: calc(2%);
+  /* 버튼의 테두리와 배경색을 없애는 속성입니다. */
+  background-color: transparent;
+  border: none;
+}
+
+/* 사이트맵 메뉴 비표시 상태 */
+#site-map-menu {
+  display: none;
+}
+
+/* 사이트맵 표시 상태 */
+#site-map-menu.show {
+  display: block;
 }
