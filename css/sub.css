@@ -81,5 +81,102 @@
 }
 
 #location #map .container {
-  padding: 70px 0;
+  padding: 70px 0 50px;
+}
+
+#location .location-info .container {
+  /* outline: 1px solid #333; */
+  display: flex;
+}
+
+#location .location-info .container img {
+  width: 50%;
+}
+
+#location .location-info .container .address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border-style: none;
+}
+
+#location th,
+td {
+  padding: 5px;
+  padding-left: 1em;
+}
+
+#location th {
+  text-align: left;
+  vertical-align: top;
+}
+
+/* introduce */
+
+#introduce #sub-title {
+  background-image: url(../image/introduce-banner1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.sec-2 .container {
+  /* outline: 1px solid #000; */
+}
+
+.sec-2-ul {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding: 30px 0;
+}
+
+#sec-2-last-ul {
+  border-style: none;
+  padding-bottom: 0;
+}
+
+#sec-2-last-ul li {
+  padding-bottom: 0;
+}
+
+.sec-2-ul li {
+  display: flex;
+  width: 50%;
+  /* outline: 1px solid red; */
+  padding: 20px;
+}
+
+.sec-2-li-year {
+  width: 15%;
+}
+
+.sec-2-li-text {
+  width: 87%;
+}
+
+.sec-1 h2 {
+  font-weight: 500;
+  margin: 70px 0 10px;
+  font-size: 30px;
+}
+
+.sec-2-ul h3 {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.sec-2-ul p {
+  font-weight: 100;
+  line-height: 2.5em;
+  color: #888;
 }
