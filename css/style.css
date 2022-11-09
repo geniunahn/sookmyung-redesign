@@ -93,7 +93,13 @@ p {
   border: 1px solid #cccccc;
   padding: 10px;
   margin-top: 26px;
-  display: none;
+  /* display: none; */
+  /* 이 아래는 메뉴의 드롭다운 애니메이션입니다. */
+  max-height: 0;
+  overflow: hidden;
+  text-align: left;
+  opacity: 0;
+  transition: 0.4s;
 }
 
 #gnb .depth2 > li {
@@ -107,7 +113,10 @@ p {
 /* hover 액션 */
 /* depth1 li에 마우스가 올라가면 depth2 표시 */
 #gnb .depth1 > li:hover .depth2 {
-  display: block;
+  /* display: block; */
+  /* 이 아래는 메뉴의 드롭다운 방식입니다. */
+  max-height: 200px;
+  opacity: 1;
 }
 
 #gnb .depth1 > li > a:hover {
@@ -348,6 +357,7 @@ p {
   /* 버튼의 테두리와 배경색을 없애는 속성입니다. */
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 /* 사이트맵 메뉴 비표시 상태 */

@@ -70,3 +70,16 @@
   align-items: center;
   margin: 20px;
 }
+
+/* location */
+
+#location #sub-title {
+  background-image: url(../image/location.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#location #map .container {
+  padding: 70px 0;
+}
