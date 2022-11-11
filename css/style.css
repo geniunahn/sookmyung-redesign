@@ -369,3 +369,8 @@ p {
 #site-map-menu.show {
   display: block;
 }
+
+/* 1단계 메뉴 버튼(pc 화살표 안보임) */
+#site-map-menu .depth1 > li > div > a > span {
+  display: none;
+}

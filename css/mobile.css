@@ -1,0 +1,308 @@
+/* mobile.css */
+
+/* 웹 폰트: Crimson, noto sans KR */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+/* css에서 style 문서 불러오기 */
+@import "./reset.css";
+
+/*  
+font-family: 'Crimson Text', serif;
+font-family: 'Noto Sans KR', sans-serif;
+*/
+
+:root {
+  --main-color: #0c2d83;
+  --bg-color-light: #f5f5f5;
+  --text-light: #666;
+  --white: #fff;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  background-color: var(--white);
+}
+
+h1 {
+  font-family: "Crimson Text", serif;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+a {
+  color: #000;
+}
+
+p {
+  line-height: 26px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  /* outline: 2px solid #333; */
+  position: relative;
+}
+
+#main-header {
+  width: 100%;
+  height: 80px;
+  /* background: #ccc; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#main-header h1 {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+}
+
+#main-header h1 img {
+  width: 100px;
+}
+
+#gnb {
+  position: absolute;
+  right: 97px;
+  top: 28px;
+  z-index: 999;
+  display: none;
+}
+
+/* 1단계 메뉴 */
+#gnb .depth1 {
+  display: flex;
+}
+
+#gnb .depth1 > li {
+  margin-left: 20px;
+  /* outline: 1px solid red; */
+  text-align: center;
+  width: 7em;
+}
+
+#gnb .depth1 > li > a {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* 2단계 메뉴 */
+#gnb .depth2 {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  margin-top: 26px;
+  overflow: hidden;
+  text-align: left;
+  /* display: none; */
+  max-height: 0;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+#gnb .depth2 > li {
+  margin-bottom: 10px;
+}
+
+#gnb .depth2 > li:last-child {
+  margin-bottom: 0;
+}
+
+/* hover 액션 */
+/* depth1 li에 마우스가 올라가면 depth2 표시 */
+#gnb .depth1 > li:hover .depth2 {
+  /* display: block; */
+  max-height: 200px;
+  opacity: 1;
+}
+
+#gnb .depth1 > li > a:hover {
+  color: var(--main-color);
+}
+
+#gnb .depth2 > li > a:hover {
+  text-decoration: underline;
+}
+
+#btn-toggle {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+
+/* 메인배너 */
+
+#main-banner {
+  height: calc(100vh - 80px);
+  background: #000;
+}
+
+#main-banner .container {
+  height: 100%;
+  background-image: url("../images/main-banner-e1.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-banner h1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+#site-menu-close,
+#site-map-menu .logo {
+  display: none;
+}
+
+/* 안보임 */
+#site-map-menu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 80px;
+  z-index: 999;
+  display: none;
+  background-color: #fff;
+}
+
+/* 버튼 누르면 보임 */
+#site-map-menu.show {
+  display: block;
+}
+
+#site-map-menu .depth1 > li {
+  /* outline: 1px solid #ccc; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  font-weight: 500;
+}
+#site-map-menu .depth2 > li {
+  font-weight: 400;
+  text-indent: 1rem;
+}
+
+#site-map-menu .depth1 a {
+  /* outline: 1px solid red; */
+  display: block;
+  padding: 10px 20px;
+}
+
+/* 2단계 메뉴 감춤 */
+#site-map-menu .depth2 {
+  display: none;
+}
+
+/* 2단계 메뉴 보임(show) */
+#site-map-menu .depth2.show {
+  display: block;
+}
+
+/* 1단계 메뉴 버튼(화살표) */
+#site-map-menu .depth1 > li > div > a {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 메인 페이지 intro */
+
+#intro ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* 메인 페이지 notice */
+
+#notice {
+  padding: 30px;
+}
+#notice .container ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+#notice ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 메인 페이지 sns 배너 */
+
+#sns-banner {
+  padding-left: 30px;
+}
+
+/* 학과소개 */
+
+#sub-title .container h1 {
+  padding: 30px 30px 0;
+}
+
+#lnb ul {
+  display: flex;
+  width: 100%;
+}
+
+#lnb ul li {
+  width: 20%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#section1 .container,
+#section2 .container {
+  padding: 30px;
+}
+
+#section1 .container h1 {
+  margin: 10px;
+}
+
+#section2 .container {
+  padding-bottom: 50px;
+}
+
+.item img {
+  width: 100%;
+  margin: 50px 0 5px;
+}
+
+.item:first-child img {
+  margin-top: 0;
+}
+
+.footer-group {
+  padding: 30px;
+}
+.footer-menu {
+  padding-bottom: 10px;
+}
